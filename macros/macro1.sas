@@ -1,5 +1,5 @@
-%Macro version1(Smoking_Status=, sortvar=, data=);
-   proc sort data= &data  out heartout;
+%Macro version1(Smoking_Status=, sortvar=, assigneddata=);
+   proc sort data= &assigneddata  out heartout;
       by &sortvar;
       where smoking_status = "&Smoking_Status";
    run;
