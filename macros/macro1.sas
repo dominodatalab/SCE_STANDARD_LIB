@@ -1,10 +1,10 @@
-%Macro version1(Smoking_Status=, sortvar=, assigneddata=);
-   proc sort data= &assigneddata  out heartout;
+%Macro version1(BP_Status=, sortvar=, assigneddata=);
+   proc sort data= &assigneddata  out = heartout;
       by &sortvar;
-      where smoking_status = "&Smoking_Status";
+      where BP_Status =  "&BP_Status" and DeathCause = "Cancer" ;
    run;
    proc print data = heartout;
-      Title1 "Heart data for &Smoking_Status status";
+      Title1 "Heart data for &BP_Status status";
       Title2 "Heart dataset sorted by &sortvar";
    run;
 %Mend version1;
