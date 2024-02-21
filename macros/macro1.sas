@@ -1,5 +1,5 @@
 %Macro version1(BP_Status=, sortvar=, assigneddata=);
-   proc sort data=&assigneddata  out = heartout;
+   proc sort data= &assigneddata  out= heartout;
       by &sortvar;
       where BP_Status =  "&BP_Status" and DeathCause = "Cancer" ;
    run;
