@@ -1,0 +1,10 @@
+%Macro version2(BP_Status=, sortvar=, assigneddata=);
+   proc sort data= &assigneddata  out=heartout2;
+      by descending &sortvar;
+      where BP_Status = "&BP_Status" and DeathCause = "Cancer" ;
+   run;
+   proc print data = heartout2;
+      Title1 "Heart data for &BP_Status status";
+      Title2 "Heart dataset sorted by descending &sortvar";
+   run;
+%Mend version2;
