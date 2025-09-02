@@ -9,3 +9,5 @@ SCE_STANDARD_LIB repo is copyied as part of the project.
 The `domino.sas` setup program checks whether your project is git backed (rather than Domino File System backed) and
 if it is, then the SCE_STANDARD_LIB root and macros folder is added to SASAUTO.
 
+UPDATE TO TEST FLOWS
+
